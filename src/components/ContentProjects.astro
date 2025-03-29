@@ -1,0 +1,77 @@
+---
+interface Project {
+    name: string;
+    description: string;
+    link: {
+        url?: string;
+        target?: string;
+        title?: string;
+        buttonLabel?: string;
+    };
+};
+
+const projects: Project[] = [{
+    name: 'TFG',
+    description: 'Implementing a CI/CD system for a container-based application.',
+    link: {
+        url: 'https://github.com/pederysky/tfg_1',
+    }
+}, {
+    name: 'Geolocation-Wireshark',
+    description: 'This is a Python project that allows you to track the journey of a data packet across the Internet.',
+    link: {
+        url: 'https://github.com/pederysky/Geolocalizacion-Wireshark'
+    }
+}, {
+    name: 'Web page with Astro',
+    description: 'This is a portfolio website I created using an Astro template to showcase my skills and projects. It is a personal project to practice web development and promote myself as a Systems Administrator.',
+    link: {
+        url: 'https://github.com/pederysky/web_astro'
+    }
+}];
+---
+
+<div>
+
+    <!-- <h2 class="text-2xl font-bold text-white mb-4">Latest Projects</h2> -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        {projects.map(project =>
+
+            <div class="flex flex-col justify-center items-start border border-gray-700 rounded-lg p-4 bg-black">
+
+                <h3 class="text-xl font-semibold text-white mb-2">
+                    {project.name}
+                </h3>
+
+                <p class="text-gray-400">
+                    {project.description}
+                </p>
+
+                {
+                    project.link?.url ?
+                        <a
+                            href={project.link.url}
+                            title={project.link.title || project.name}
+                            target={project.link.target || '_blank'}
+                            class="
+                                w-full px-4 py-2.5 mt-4 text-center
+
+                                border border-gray-600 rounded-lg
+
+                                hover:text-primary
+                                hover:border-primary
+                            ">
+                            {project.link.buttonLabel || 'Open Project Website'}
+                        </a>
+                    : null
+                }
+
+            </div>
+
+        )}
+
+    </div>
+
+</div>

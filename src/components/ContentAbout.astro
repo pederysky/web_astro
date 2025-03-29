@@ -1,0 +1,110 @@
+---
+import { Code } from 'astro:components';
+
+const code = `interface Systems Admin {
+    name: Pedro Egea Ortega;
+    Soft skills: [
+        "Teamwork",
+        "Leadership",
+        "Conflict Resolution",
+        "Adaptability",
+        "Critical Thinking"
+    ]
+    Languages: [
+        "English (B2)",
+        "German (A2)",
+        "Spanish (Native)",
+        "Valencian (Native)"
+    ]
+    interests: [
+        "Cybersecurity",
+        "DevOps",
+        "Cloud Computing",
+        "Automation"
+    ]
+};
+
+type ContactType = 'github' | 'linkedIn' | 'email';
+
+const pedro: SystemAdmin = {
+    name: "Pedro Egea Ortega",
+    skills: [
+        "Linux & Windows Administration",
+        "Bash & PowerShell Scripting",
+        "Docker & Kubernetes",
+        "Networking (VLANs, Subnetting, Cisco)",
+        "MySQL, PostgreSQL, OracleDB",
+        "Python & Flask Development",
+        "HTML, CSS, JavaScript",
+        "Cybersecurity Basics",
+        "Cloud Computing (AWS)"
+    ],
+    experience: [
+        {
+            position: "IT Systems Administrator (FCT - ASIR)",
+            company: "Zataca Systems",
+            duration: "3 Months"
+        },
+        {
+            position: "European Volunteer",
+            company: "Mehr Raum Fuer Kinder",
+            duration: "2022-2023"
+        },
+        {
+            position: "Event Assistant",
+            company: "SEYCU",
+            duration: "2018-2020"
+        }
+    ],
+    certifications: [
+        "AWS Academy Cloud Foundations"
+    ],
+};
+
+// Contact function
+const contact = (type: ContactType): string => {
+    switch (type) {
+        case 'github':
+            return 'https://github.com/pederysky';
+        case 'linkedIn':
+            return 'https://www.linkedin.com/in/pedro-egea-ortega-501488314/';
+        case 'email':
+            return 'pedroegeaortega@gmail.com';
+        default:
+            return 'Send fax.';
+    }
+};
+
+`;
+---
+
+<Code
+    code={code}
+    lang="js"
+    wrap={true}
+/>
+
+<style is:global>
+
+    /* Custom styling for code block line numbers */
+    pre.astro-code {
+        @apply bg-transparent !important;
+    }
+
+    pre.astro-code code {
+        @apply block;
+        counter-reset: step;
+        counter-increment: step 0;
+    }
+
+    pre.astro-code code .line {
+        @apply relative;
+    }
+
+    pre.astro-code code .line::before {
+        content: counter(step);
+        counter-increment: step;
+        @apply text-gray-600 pr-2;
+    }
+
+</style>

@@ -15,6 +15,12 @@ npm run dev
 # 4. Build for production
 npm run build
 
+# Windows GitBash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+npm run dev
+
 # Deploy the contents of the `./dist` folder wherever you like.
 ```
 

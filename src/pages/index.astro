@@ -98,24 +98,6 @@ import ContentProjects from '../components/ContentProjects.astro';
         Built with <a href="https://astro.build" title="Astro" target="_blank" class="text-primary hover:underline">Astro</a>
     </div>
 
-
-
-fetch("https://9c90-185-101-162-205.ngrok-free.app/webhook/trafico", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    url: window.location.href,
-    userAgent: navigator.userAgent,
-    timestamp: new Date()
-  })
-});
-
-
-
-
-
 </Layout>
 
 <style is:global>

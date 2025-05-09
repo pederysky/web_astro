@@ -8,6 +8,8 @@ const code = `interface Systems Admin {
         "Leadership",
         "Conflict Resolution",
         "Adaptability",
+        "Time management",
+        "Document preparation",
         "Critical Thinking"
     ]
     Languages: [
@@ -29,36 +31,53 @@ type ContactType = 'github' | 'linkedIn' | 'email';
 const pedro: SystemAdmin = {
     name: "Pedro Egea Ortega",
     skills: [
-        "Linux & Windows Administration",
-        "Bash & PowerShell Scripting",
-        "Docker & Kubernetes",
-        "GitHub Actions, Jenkins, Ansible, N8N",
-        "Zabbix, Grafana, Prometheus, ELK Stack",
-        "Networking (VLANs, Subnetting, Cisco)",
-        "MySQL, PostgreSQL, OracleDB",
-        "Python & Flask Development",
-        "Apache, Nginx"
-        "HTML, YAML, CSS, JavaScript",
-        "Cybersecurity Basics",
-        "Cloud Computing (AWS)"
-    ],
-    experience: [
-        {
-            position: "IT Systems Administrator (FCT - ASIR)",
-            company: "Zataca Systems",
-            duration: "3 Months"
-        },
-        {
-            position: "European Volunteer",
-            company: "Mehr Raum Fuer Kinder",
-            duration: "2022-2023"
-        },
-        {
-            position: "Event Assistant",
-            company: "SEYCU",
-            duration: "2018-2020"
-        }
-    ],
+               {
+                    category: "Operating Systems",
+                    skills: ["Linux", "Windows"]
+                },
+                {
+                    category: "Automation & DevOps",
+                    skills: ["Docker", "Kubernetes", "GitHub Actions", "Jenkins", "Ansible", "N8N"]
+                },
+                {
+                    category: "Monitoring & Networking",
+                    skills: ["Zabbix", "Grafana", "Prometheus", "ELK Stack", "WireGuard VPN", "Networking (VLANs, Subnetting, Cisco)"]
+                },
+                {
+                    category: "Databases",
+                    skills: ["MySQL", "PostgreSQL", "OracleDB"]
+                },
+                {
+                    category: "Development & Scripting",
+                    skills: ["Bash", "PowerShell", "Python & Flask", "HTML", "YAML", "CSS", "JavaScript"]
+                },
+                {
+                    category: "Cybersecurity",
+                    skills: ["Cybersecurity Fundamentals", "Implementation of Active Security Measures", "Participation in CTFs and Practical Labs"]
+                },
+                {
+                    category: "Cloud Computing",
+                    skills: ["AWS"]
+                },
+                {
+                    category: "Web Servers",
+                    skills: ["Apache", "Nginx"]
+                }
+            ]
+experience: [
+    {
+        position: "Systems Administrator",
+        company: "Zataca Systems (FCT ASIR)",
+        location: "Torrellano, Spain",
+        duration: "February 2025 - May 2025",
+        responsibilities: [
+            "Technical Support",
+            "Network and Server Maintenance",
+            "VPN Administration with WireGuard",
+            "Process and Task Automation"
+        ]
+    }
+],
     certifications: [
         "AWS Academy Cloud Foundations"
     ],
